@@ -6,7 +6,7 @@
   * {
     @apply border-white/20;
   }
-  
+
   body {
     @apply bg-black text-white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,12 +21,29 @@
   .glass {
     @apply backdrop-blur-xl bg-white/10 border border-white/20;
   }
-  
+
   .glass-hover {
     @apply hover:bg-white/15 hover:border-white/30;
   }
-  
+
   .gradient-text {
     @apply bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    20% { transform: translate(-5px, 5px) rotate(-1deg); }
+    40% { transform: translate(5px, -5px) rotate(1deg); }
+    60% { transform: translate(-5px, 5px) rotate(-1deg); }
+    80% { transform: translate(5px, -5px) rotate(1deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+  }
+
+  .shake {
+    animation: shake 0.6s infinite;
+  }
+
+  .horror-font {
+    font-family: 'Creepster', cursive;
   }
 }
