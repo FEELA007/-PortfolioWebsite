@@ -29,7 +29,9 @@ function App() {
   };
 
   return (
-    <div className={`min-h-screen text-white overflow-x-hidden transition-all duration-700 ${nuked ? 'bg-red-900 shake' : 'bg-black'}`}>
+  <motion.div
+  className="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-end items-center pb-16 z-50 text-center"
+
       <Background />
 
       <motion.main
