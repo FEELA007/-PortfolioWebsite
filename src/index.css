@@ -30,6 +30,27 @@
     @apply bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent;
   }
 
+  .gradient-gold-blue {
+    @apply bg-gradient-to-r from-yellow-400 via-amber-500 to-blue-500 bg-clip-text text-transparent;
+  }
+
+
+  @keyframes underline-shoot {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 96px;
+      opacity: 1;
+    }
+  }
+
+  .animate-shoot-line {
+    animation: underline-shoot 0.4s ease-out forwards;
+  }
+
+
   @keyframes shake {
     0% { transform: translate(0px, 0px) rotate(0deg); }
     20% { transform: translate(-5px, 5px) rotate(-1deg); }
@@ -42,6 +63,7 @@
   .shake {
     animation: shake 0.6s infinite;
   }
+
 
   .horror-font {
     font-family: 'Creepster', cursive;
