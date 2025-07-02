@@ -64,8 +64,10 @@ function App() {
       {/* Popup & Countdown */}
       <AnimatePresence>
         {showPopup && (
-          <motion.div
-            className="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center z-50 text-center"
+       
+         <motion.div
+  className="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-end items-center pb-16 z-50 text-center"
+
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
