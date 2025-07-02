@@ -25,7 +25,7 @@ function App() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
       >
-        <p>© 2024 Jammula Karthik (Feela). Crafted with passion.</p>
+        <p>© 2025 Jammula Karthik (Feela). Crafted For Fun.</p>
       </motion.footer>
     </div>
   );
