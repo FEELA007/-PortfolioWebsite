@@ -27,7 +27,8 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-400 via-gold-500 to-blue-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-yellow-400 via-amber-500 to-blue-500
+
   }
 
   .gradient-gold-blue {
