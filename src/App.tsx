@@ -29,9 +29,7 @@ function App() {
   };
 
   return (
-  <motion.div
-  className="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-end items-center pb-16 z-50 text-center"
-
+    <div className={`min-h-screen text-white overflow-x-hidden transition-all duration-700 ${nuked ? 'bg-red-900 shake' : 'bg-black'}`}>
       <Background />
 
       <motion.main
@@ -50,7 +48,10 @@ function App() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
       >
-        <p>© 2025 Jammula Karthik (Feela). Crafted For Fun.</p>
+        <h1 className="text-2xl font-extrabold gradient-gold-blue">
+          © 2025 Jammula Karthik (Feela)
+        </h1>
+        <div className="h-1 mt-2 rounded-full bg-gradient-to-r from-yellow-400 via-amber-500 to-blue-500 mx-auto animate-shoot-line w-0"></div>
 
         {/* Nuke Button */}
         <button
@@ -64,10 +65,8 @@ function App() {
       {/* Popup & Countdown */}
       <AnimatePresence>
         {showPopup && (
-       
-         <motion.div
-  className="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-end items-center pb-16 z-50 text-center"
-
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-end items-center pb-16 z-50 text-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
