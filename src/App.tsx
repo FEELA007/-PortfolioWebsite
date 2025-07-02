@@ -1,24 +1,47 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Background from './components/Background';
 import Hero from './components/Hero';
 import SocialGrid from './components/SocialGrid';
 
 function App() {
+  const [nuked, setNuked] = useState(false);
+  const [countdown, setCountdown] = useState(5);
+  const [showPopup, setShowPopup] = useState(false);
+
+  const triggerNuke = () => {
+    setNuked(true);
+    setShowPopup(true);
+    let timer = 5;
+    setCountdown(timer);
+
+    const interval = setInterval(() => {
+      timer--;
+      setCountdown(timer);
+      if (timer === 0) {
+        clearInterval(interval);
+        setTimeout(() => {
+          setNuked(false);
+          setShowPopup(false);
+        }, 1000);
+      }
+    }, 1000);
+  };
+
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className={`min-h-screen text-white overflow-x-hidden transition-all duration-700 ${nuked ? 'bg-red-900 shake' : 'bg-black'}`}>
       <Background />
-      
+
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        className={`${nuked ? 'blur-sm opacity-60' : ''}`}
       >
         <Hero />
         <SocialGrid />
       </motion.main>
-      
-      {/* Footer */}
+
       <motion.footer
         className="py-8 text-center text-white/50 text-sm"
         initial={{ opacity: 0 }}
@@ -26,7 +49,40 @@ function App() {
         transition={{ duration: 0.8, delay: 1 }}
       >
         <p>© 2025 Jammula Karthik (Feela). Crafted For Fun.</p>
+
+        {/* Nuke Button */}
+        <button
+          onClick={triggerNuke}
+          className="mt-6 px-6 py-3 bg-red-600 text-white font-bold rounded-full hover:bg-red-800 transition duration-300"
+        >
+          Nuke Button
+        </button>
       </motion.footer>
+
+      {/* Popup & Countdown */}
+      <AnimatePresence>
+        {showPopup && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center z-50 text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.h1
+              className="text-4xl font-extrabold text-red-600 mb-6 animate-pulse"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              Sorry... it was a nuke button 💣
+            </motion.h1>
+
+            <motion.div className="text-6xl font-black text-red-500 horror-font">
+              {countdown > 0 ? countdown : '💥'}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
