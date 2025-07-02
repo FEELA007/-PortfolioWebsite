@@ -48,12 +48,15 @@ function App() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
       >
-        <h1 className="text-2xl font-extrabold gradient-gold-blue">
+        <h1 className="text-2xl font-extrabold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
           © 2025 Jammula Karthik (Feela)
         </h1>
-        <div className="h-1 mt-2 rounded-full bg-gradient-to-r from-yellow-400 via-amber-500 to-blue-500 mx-auto animate-shoot-line w-0"></div>
+        <div className="h-1 mt-2 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mx-auto animate-shoot-line w-0"></div>
 
-        {/* Nuke Button */}
+        <p className="text-sm mt-3 font-semibold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Crafted For Fun.
+        </p>
+
         <button
           onClick={triggerNuke}
           className="mt-6 px-6 py-3 bg-red-600 text-white font-bold rounded-full hover:bg-red-800 transition duration-300"
@@ -62,7 +65,6 @@ function App() {
         </button>
       </motion.footer>
 
-      {/* Popup & Countdown */}
       <AnimatePresence>
         {showPopup && (
           <motion.div
@@ -79,7 +81,6 @@ function App() {
             >
               Sorry... it was a nuke button 💣
             </motion.h1>
-
             <motion.div className="text-6xl font-black text-red-500 horror-font">
               {countdown > 0 ? countdown : '💥'}
             </motion.div>
