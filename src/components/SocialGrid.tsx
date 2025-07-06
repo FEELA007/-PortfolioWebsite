@@ -43,14 +43,7 @@ const socialData = [
     description: 'Join my Telegram channel for exclusive updates, quick tips, and direct community discussions.',
     color: 'from-blue-500 to-cyan-500'
   },
-  {
-    title: 'Private Instagram',
-    username: '@karthik__notfound',
-    url: 'https://www.instagram.com/karthik__notfound',
-    icon: User,
-    description: 'My personal Instagram account with behind-the-scenes moments and more intimate content.',
-    color: 'from-gray-500 to-gray-700'
-  },
+
   {
     title: 'Email',
     username: 'karthikjammula007@gmail.com',
