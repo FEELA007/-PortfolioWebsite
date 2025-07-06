@@ -16,7 +16,7 @@ const socialData = [
     username: '@feela.aep',
     url: 'https://www.instagram.com/feela.aep',
     icon: Instagram,
-    description: 'Dedicated to After Effects tutorials, motion graphics showcase, and visual effects content.',
+    description: 'Dedicated to After Effects tutorials, Simple edits and random videos.',
     color: 'from-purple-500 to-pink-500'
   },
   {
@@ -40,7 +40,7 @@ const socialData = [
     username: 'Channel',
     url: 'https://t.me/+6ve4ByA67b0zMjRl',
     icon: Send,
-    description: 'Join my Telegram channel for exclusive updates, quick tips, and direct community discussions.',
+    description: 'Join my Telegram channel for templates, quick tips, and direct community discussions.',
     color: 'from-blue-500 to-cyan-500'
   },
 
