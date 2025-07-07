@@ -13,10 +13,10 @@ const socialData = [
   },
   {
     title: 'Instagram',
-    username: '@feela.aep',
-    url: 'https://www.instagram.com/feela.aep',
+    username: '@karthik_emo',
+    url: 'https://www.instagram.com/karthik_emo/',
     icon: Instagram,
-    description: 'Dedicated to After Effects tutorials, Simple edits and random videos.',
+    description: 'My private acc orike petta ra 😂',
     color: 'from-purple-500 to-pink-500'
   },
   {
